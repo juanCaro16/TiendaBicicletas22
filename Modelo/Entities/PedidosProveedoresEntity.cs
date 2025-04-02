@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace modelo.Entities
+namespace Modelo.Entities
 {
-    class PedidosProveedoresEntity
+    public class PedidosProveedoresEntity
     {
         public int id { get; set; }
         public DateTime fecha_pedido { get; set; }

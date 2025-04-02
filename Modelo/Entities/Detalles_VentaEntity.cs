@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace modelo.Entities
+namespace Modelo.Entities
 {
-    class Detalles_VentaEntity
+    public class Detalles_VentaEntity
     {
         public int id { get; set; }
         public int cantidad { get; set; }

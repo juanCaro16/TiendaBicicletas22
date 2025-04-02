@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace modelo.Entities
+namespace Modelo.Entities
 {
-    class UsuarioEntity
+    public class UsuarioEntity
     {
         public int id { get; set; }
         public string nombre { get; set; }

@@ -1,5 +1,4 @@
-﻿using modelo.Entities;
-
+﻿using Modelo.Entities;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -11,6 +10,8 @@ namespace Modelo
 {
     public class BaseDatos : ConexionMysql
     {
+
+        //traer
         public List<BicicletasEntity> TraerBicicletas()
         {
             List<BicicletasEntity> Bicicletas = new List<BicicletasEntity>();
@@ -141,7 +142,7 @@ namespace Modelo
                 PedidPedidosProveedoresActual.id = dr.GetInt32(0);
                 PedidPedidosProveedoresActual.fecha_pedido = dr.GetDateTime(1);
                 PedidPedidosProveedoresActual.estado = dr.GetString(2);
-                PedidPedidosProveedoresActual.proveedor_id = dr.GetString(3);
+                PedidPedidosProveedoresActual.proveedor_id = dr.GetInt32(3);
                 PedidosProveedores.Add(PedidPedidosProveedoresActual);
             }
 
@@ -193,6 +194,7 @@ namespace Modelo
             return Usuarios;
         }
 
+        //guardar
         public int GuardarBicicletas(string marca, string modelo, string tipo, string tamaño, decimal precio, int stock, string imagen)
         {
             int resultado = 0;
@@ -205,7 +207,7 @@ namespace Modelo
             return resultado;
         }
 
-        public int Guardarclientes(string nombre, string apellido, string email, string telefono, string direccion, DateTime fecha_registro)
+        public int GuardarClientes(string nombre, string apellido, string email, string telefono, string direccion, DateTime fecha_registro)
         {
             int resultado = 0;
 
@@ -258,10 +260,182 @@ namespace Modelo
             int resultado = 0;
 
             MySqlCommand cmd = GetConnection().CreateCommand();
-            cmd.CommandText = "INSERT INTO Bicicletas (marca, modelo, tipo, tamaño, precio, stock, imagen)" +
+            cmd.CommandText = "INSERT INTO Pedidos_Proveedores (fecha_pedido, estado, proveedor_id)" +
                 " VALUES ('" + fecha_pedido + "','" + estado + "','" + proveedor_id + "',)";
             resultado = cmd.ExecuteNonQuery();
 
+            return resultado;
+        }
+
+        public int GuardarDetalles_Pedido(int cantidad, decimal precio_unitario, decimal subtotal, int pedidos_id, int bicicleta_id)
+        {
+            int resultado = 0;
+
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "INSERT INTO Detalles_Pedido (cantidad, precio_unitario, subtotal, pedidos_id, bicicleta_id)" +
+                " VALUES ('" + cantidad + "','" + precio_unitario + "','" + subtotal + "','" + pedidos_id + "','" + bicicleta_id + "',)";
+            resultado = cmd.ExecuteNonQuery();
+
+            return resultado;
+        }
+
+        public int GuardarUsuarios(string nombre, string email, string contraseña, string rol)
+        {
+            int resultado = 0;
+
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "INSERT INTO Usuarios (nombre, email, contraseña, rol)" +
+                " VALUES ('" + nombre + "','" + email + "','" + contraseña + "','" + rol + "',)";
+            resultado = cmd.ExecuteNonQuery();
+
+            return resultado;
+        }
+
+        //actualizar
+        public int ActualizarBicicletas(int id, string marca, string modelo, string tipo, string tamaño, decimal precio, int stock, string imagen)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "UPDATE Bicicletas SET marca = '" + marca + "', modelo = '" + modelo + "', tipo = '" + tipo + "', tamaño = '" + tamaño + "', precio = '" + precio + "', stock = '" + stock + "', imagen = '" + imagen + "' WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int ActualizarClientes(int id, string nombre, string apellido, string email, string telefono, string direccion, DateTime fecha_registro)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "UPDATE Clientes SET nombre = '" + nombre + "', apellido = '" + apellido + "', email = '" + email + "', telefono = '" + telefono + "', direccion = '" + direccion + "', fecha_registro = '" + fecha_registro + "' WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int ActualizarVentas(int id, DateTime fecha, decimal total, string metodo_pago, int cliente_id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "UPDATE Ventas SET fecha = '" + fecha + "', total = '" + total + "', metodo_pago = '" + metodo_pago + "', cliente_id = '" + cliente_id + "' WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int ActualizarDetalles_Venta(int id, int cantidad, decimal precio_unitario, decimal subtotal, int venta_id, int bicicleta_id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "UPDATE Detalles_Venta SET cantidad = '" + cantidad + "', precio_unitario = '" + precio_unitario + "', subtotal = '" + subtotal + "', venta_id = '" + venta_id + "', bicicleta_id = '" + bicicleta_id + "' WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int ActualizarProveedores(int id, string nombre, string telefono, string email, string direccion)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "UPDATE Proveedores SET nombre = '" + nombre + "', telefono = '" + telefono + "', email = '" + email + "', direccion = '" + direccion + "' WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int ActualizarPedidos_Proveedores(int id, DateTime fecha_pedido, string estado, int proveedor_id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "UPDATE Pedidos_Proveedores SET fecha_pedido = '" + fecha_pedido + "', estado = '" + estado + "', proveedor_id = '" + proveedor_id + "' WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int ActualizarDetalles_Pedido(int id, int cantidad, decimal precio_unitario, decimal subtotal, int pedidos_id, int bicicleta_id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "UPDATE Detalles_Pedido SET cantidad = '" + cantidad + "', precio_unitario = '" + precio_unitario + "', subtotal = '" + subtotal + "', pedidos_id = '" + pedidos_id + "', bicicleta_id = '" + bicicleta_id + "' WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int ActualizarUsuarios(int id, string nombre, string email, string contraseña, string rol)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "UPDATE Usuarios SET nombre = '" + nombre + "', email = '" + email + "', contraseña = '" + contraseña + "', rol = '" + rol + "' WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+
+        //eliminar
+
+        public int EliminarBicicletas(int id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "DELETE FROM Bicicletas WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int EliminarClientes(int id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "DELETE FROM Clientes WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int EliminarVentas(int id)
+        {
+            int resultado = 0; 
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "DELETE FROM Ventas WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int EliminarDetalles_Venta(int id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "DELETE FROM Detalles_Venta WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int EliminarProveedores(int id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "DELETE FROM Proveedores WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int EliminarPedidos_Proveedores(int id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "DELETE FROM Pedidos_Proveedores WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int EliminarDetalles_Pedido(int id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "DELETE FROM Detalles_Pedido WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
+        public int EliminarUsuarios(int id)
+        {
+            int resultado = 0;
+            MySqlCommand cmd = GetConnection().CreateCommand();
+            cmd.CommandText = "DELETE FROM Usuarios WHERE id = " + id;
+            resultado = cmd.ExecuteNonQuery();
             return resultado;
         }
     }

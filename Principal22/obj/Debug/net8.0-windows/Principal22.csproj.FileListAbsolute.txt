@@ -16,3 +16,23 @@ C:\Users\Juan David Caro\source\repos\TiendaBicicletas22\Principal22\obj\Debug\n
 C:\Users\Juan David Caro\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.pdb
 C:\Users\Juan David Caro\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.genruntimeconfig.cache
 C:\Users\Juan David Caro\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\ref\Principal22.dll
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\bin\Debug\net8.0-windows\Principal22.exe
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\bin\Debug\net8.0-windows\Principal22.deps.json
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\bin\Debug\net8.0-windows\Principal22.runtimeconfig.json
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\bin\Debug\net8.0-windows\Principal22.dll
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\bin\Debug\net8.0-windows\Principal22.pdb
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.Properties.Resources.resources
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.Ventana_Administrador.resources
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.VentanaAgregarProductos.resources
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.VentanaPrincipal.resources
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.csproj.GenerateResource.cache
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.AssemblyInfoInputs.cache
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.AssemblyInfo.cs
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.csproj.CoreCompileInputs.cache
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.sourcelink.json
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.dll
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\refint\Principal22.dll
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.pdb
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\Principal22.genruntimeconfig.cache
+C:\Users\MATEO\source\repos\TiendaBicicletas22\Principal22\obj\Debug\net8.0-windows\ref\Principal22.dll

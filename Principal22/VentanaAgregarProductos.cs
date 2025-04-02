@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Principal22
 {
-    public partial class Ventana_Administrador : Form
+    public partial class VentanaAgregarProductos: Form
     {
-        public Ventana_Administrador()
+        public VentanaAgregarProductos()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

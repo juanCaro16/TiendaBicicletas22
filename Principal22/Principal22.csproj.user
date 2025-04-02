@@ -4,6 +4,9 @@
     <Compile Update="VentanaAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="VentanaAgregarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="VentanaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

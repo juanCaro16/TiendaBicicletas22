@@ -58,7 +58,7 @@ namespace Principal22
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(276, 233);
+            label1.Location = new Point(264, 227);
             label1.Name = "label1";
             label1.Size = new Size(102, 20);
             label1.TabIndex = 2;

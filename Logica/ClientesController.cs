@@ -58,6 +58,9 @@ namespace Logica
 
 
         //Metodo para eliminar clientes
+        
+
+
 
         public string EliminarClientes(int id)
         {

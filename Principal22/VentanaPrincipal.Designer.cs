@@ -31,6 +31,7 @@ namespace Principal22
         {
             button1 = new Button();
             button2 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -42,7 +43,7 @@ namespace Principal22
             button1.TabIndex = 0;
             button1.Text = "Administrador\r\n";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += this.button1_Click;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -54,18 +55,29 @@ namespace Principal22
             button2.Text = "Empleados";
             button2.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(276, 233);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Texto Muestra";
+            // 
             // VentanaPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "VentanaPrincipal";
             Text = "Ventana Principal";
             Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,5 +91,6 @@ namespace Principal22
 
         private Button button1;
         private Button button2;
+        private Label label1;
     }
 }

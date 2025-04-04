@@ -20,11 +20,11 @@ namespace Logica
         }
 
         //Metodo para guardar detalles de pedido
-        public string GuardarDetalles_Pedido(int cantidad, decimal precio_unitario, decimal subtotal, int pedidos_id, int bicicleta_id)
+        public string GuardarDetalles_Pedido(int cantidad, decimal precio_unitario, decimal subtotal, int pedidos_id, int producto_id)
         {
             string resultado = "";
             BaseDatos db = new BaseDatos();
-            int filasAfectadas = db.GuardarDetalles_Pedido(cantidad, precio_unitario, subtotal, pedidos_id, bicicleta_id);
+            int filasAfectadas = db.GuardarDetalles_Pedido(cantidad, precio_unitario, subtotal, pedidos_id, producto_id);
             if (filasAfectadas > 0)
             {
                 resultado = "Detalle de pedido guardado";
@@ -39,11 +39,11 @@ namespace Logica
 
         //Metodo para actualizar detalles de pedido
 
-        public string ActualizarDetalles_Pedido(int id, int cantidad, decimal precio_unitario, decimal subtotal, int pedidos_id, int bicicleta_id)
+        public string ActualizarDetalles_Pedido(int id, int cantidad, decimal precio_unitario, decimal subtotal, int pedidos_id, int producto_id)
         {
             string resultado = "";
             BaseDatos db = new BaseDatos();
-            int filasAfectadas = db.ActualizarDetalles_Pedido(id, cantidad, precio_unitario, subtotal, pedidos_id, bicicleta_id);
+            int filasAfectadas = db.ActualizarDetalles_Pedido(id, cantidad, precio_unitario, subtotal, pedidos_id, producto_id);
             if (filasAfectadas > 0)
             {
                 resultado = "Detalle de pedido actualizado";

@@ -1,0 +1,13 @@
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\bin\Debug\net8.0\Modelo.deps.json
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\bin\Debug\net8.0\Modelo.dll
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\bin\Debug\net8.0\Modelo.pdb
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\Modelo.csproj.AssemblyReference.cache
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\Modelo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\Modelo.AssemblyInfoInputs.cache
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\Modelo.AssemblyInfo.cs
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\Modelo.sourcelink.json
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\Modelo.dll
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\refint\Modelo.dll
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\Modelo.pdb
+C:\Users\Juan David Caro\Documents\tiendabicicletas23\TiendaBicicletas22\Modelo\obj\Debug\net8.0\ref\Modelo.dll

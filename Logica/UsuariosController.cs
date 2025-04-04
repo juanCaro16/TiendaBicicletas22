@@ -12,19 +12,19 @@ namespace Logica
     {
 
         //Metodo para ver los usuarios
-        public List<UsuarioEntity> VerUsuarios()
+        public List<UsuariosEntity> VerUsuarios()
         {
             BaseDatos db = new BaseDatos();
-            List<UsuarioEntity> Usuarios = db.TraerUsuario();
+            List<UsuariosEntity> Usuarios = db.TraerUsuarios();
             return Usuarios;
         }
 
         //Metodo para guardar usuarios
-        public string GuardarUsuarios(string nombre, string email, string contraseña, string rol)
+        public string GuardarUsuarios(string nombre, string apellido, string email, string telefono, string direccion, DateTime fecha_registro, string contraseña, string rol_id)
         {
             string resultado = "";
             BaseDatos db = new BaseDatos();
-            int filasAfectadas = db.GuardarUsuarios(nombre, email, contraseña, rol);
+            int filasAfectadas = db.GuardarUsuarios(nombre, apellido, email, telefono, direccion, fecha_registro, contraseña, rol_id);
             if (filasAfectadas > 0)
             {
                 resultado = "Usuario guardado";
@@ -39,11 +39,11 @@ namespace Logica
 
         //Metodo para actualizar usuarios
 
-        public string ActualizarUsuarios(int id, string nombre, string email, string contraseña, string rol)
+        public string ActualizarUsuarios(int id, string nombre, string apellido, string email, string telefono, string direccion, DateTime fecha_registro, string contraseña, string rol_id)
         {
             string resultado = "";
             BaseDatos db = new BaseDatos();
-            int filasAfectadas = db.ActualizarUsuarios(id, nombre, email, contraseña, rol);
+            int filasAfectadas = db.ActualizarUsuarios(id, nombre, apellido, email, telefono, direccion, fecha_registro, contraseña, rol_id);
             if (filasAfectadas > 0)
             {
                 resultado = "Usuario actualizado";

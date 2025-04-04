@@ -13,7 +13,7 @@ namespace Modelo.Entities
         public decimal precio_unitario { get; set; }
         public decimal subtotal { get; set; }
         public int pedido_id { get; set; }
-        public int bicicleta_id { get; set; }
+        public int producto_id { get; set; }
 
     }
 }

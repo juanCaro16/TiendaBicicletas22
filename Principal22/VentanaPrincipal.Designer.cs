@@ -31,7 +31,7 @@ namespace Principal22
         {
             button1 = new Button();
             button2 = new Button();
-            label1 = new Label();
+            button3 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -48,21 +48,23 @@ namespace Principal22
             // button2
             // 
             button2.BackColor = SystemColors.GradientActiveCaption;
-            button2.Location = new Point(340, 103);
+            button2.Location = new Point(305, 103);
             button2.Name = "button2";
             button2.Size = new Size(115, 43);
             button2.TabIndex = 1;
             button2.Text = "Empleados";
             button2.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // button3
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(264, 227);
-            label1.Name = "label1";
-            label1.Size = new Size(102, 20);
-            label1.TabIndex = 2;
-            label1.Text = "Texto Muestra";
+            button3.BackColor = SystemColors.GradientActiveCaption;
+            button3.Location = new Point(467, 103);
+            button3.Name = "button3";
+            button3.Size = new Size(115, 43);
+            button3.TabIndex = 2;
+            button3.Text = "Login";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // VentanaPrincipal
             // 
@@ -70,19 +72,18 @@ namespace Principal22
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "VentanaPrincipal";
             Text = "Ventana Principal";
             Load += Form1_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Ventana_Administrador ventana_Administrador = new Ventana_Administrador();
+            VentanaAdministrador ventana_Administrador = new VentanaAdministrador();
             ventana_Administrador.Show();
 
         }
@@ -91,6 +92,6 @@ namespace Principal22
 
         private Button button1;
         private Button button2;
-        private Label label1;
+        private Button button3;
     }
 }

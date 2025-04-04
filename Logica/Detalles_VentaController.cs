@@ -22,11 +22,11 @@ namespace Logica
         }
 
         //Metodo para guardar detalles de venta
-        public string GuardarDetalles_Venta(int cantidad, decimal precio_unitario, decimal subtotal, int venta_id, int bicicleta_id)
+        public string GuardarDetalles_Venta(int cantidad, decimal precio_unitario, decimal subtotal, int venta_id, int producto_id)
         {
             string resultado = "";
             BaseDatos db = new BaseDatos();
-            int filasAfectadas = db.GuardarDetalles_Venta(cantidad, precio_unitario, subtotal, venta_id, bicicleta_id);
+            int filasAfectadas = db.GuardarDetalles_Venta(cantidad, precio_unitario, subtotal, venta_id, producto_id);
             if (filasAfectadas > 0)
             {
                 resultado = "Detalle de venta guardado";
@@ -40,11 +40,11 @@ namespace Logica
 
         //Metodo para actualizar detalles de venta
 
-        public string ActualizarDetalles_Venta(int id, int cantidad, decimal precio_unitario, decimal subtotal, int venta_id, int bicicleta_id)
+        public string ActualizarDetalles_Venta(int id, int cantidad, decimal precio_unitario, decimal subtotal, int venta_id, int producto_id)
         {
             string resultado = "";
             BaseDatos db = new BaseDatos();
-            int filasAfectadas = db.ActualizarDetalles_Venta(id, cantidad, precio_unitario, subtotal, venta_id, bicicleta_id);
+            int filasAfectadas = db.ActualizarDetalles_Venta(id, cantidad, precio_unitario, subtotal, venta_id, producto_id);
             if (filasAfectadas > 0)
             {
                 resultado = "Detalle de venta actualizado";
